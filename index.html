@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4F46E5,#3B82F6,#06B6D4);
+    overflow:hidden;
+}
+
+/* Nền */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(80px);
+}
+
+body::before{
+    background:#ffffff44;
+    top:-120px;
+    left:-120px;
+}
+
+body::after{
+    background:#38bdf844;
+    bottom:-120px;
+    right:-120px;
+}
+
+.card{
+    position:relative;
+    width:min(900px,92%);
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:28px;
+    padding:35px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:8px;
+}
+
+p{
+    text-align:center;
+    color:#eef;
+    margin-bottom:30px;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.btn{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#1f2937;
+    background:white;
+    border-radius:20px;
+    padding:18px;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.btn:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 20px 35px rgba(0,0,0,.18);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+    color:white;
+}
+
+.text h2{
+    font-size:20px;
+}
+
+.text span{
+    color:#6b7280;
+    font-size:14px;
+}
+
+/* Thêm nút ở đây */
+/*
+<a class="btn" href="camera.html">
+    <div class="icon">📷</div>
+    <div class="text">
+        <h2>Camera</h2>
+        <span>Mở camera</span>
+    </div>
+</a>
+*/
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🚀 Menu</h1>
+<p>Chọn chức năng bạn muốn mở</p>
+
+<div class="menu">
+
+<!-- ===== NÚT 1 ===== -->
+<a class="btn" href="wifi.html">
+    <div class="icon">📶</div>
+    <div class="text">
+        <h2>WiFi</h2>
+        <span>Mở trang WiFi</span>
+    </div>
+</a>
+
+<!-- ===== NÚT 2 ===== -->
+<a class="btn" href="wifi.html">
+    <div class="icon">👾</div>
+    <div class="text">
+        <h2>.....</h2>
+        <span>...</span>
+    </div>
+</a>
+
+<!-- ===== THÊM NÚT MỚI BÊN DƯỚI ===== -->
+  
+</div>
+
+</div>
+
+</body>
+</html>
