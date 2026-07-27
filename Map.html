@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Google Maps</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f172a;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* Card */
+.map-card{
+    width:95%;
+    height:92%;
+    border-radius:28px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:
+        0 0 30px rgba(0,255,255,.25),
+        0 0 80px rgba(0,120,255,.15);
+    border:2px solid rgba(255,255,255,.12);
+}
+
+/* Map */
+.map-card iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* Thanh tiêu đề */
+.header{
+    position:absolute;
+    top:18px;
+    left:18px;
+    right:18px;
+    height:60px;
+    background:rgba(15,23,42,.75);
+    backdrop-filter:blur(15px);
+    border-radius:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 22px;
+    color:#fff;
+    z-index:100;
+}
+
+.title{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.btn{
+    text-decoration:none;
+    background:#3b82f6;
+    color:white;
+    padding:10px 18px;
+    border-radius:12px;
+    transition:.25s;
+}
+
+.btn:hover{
+    background:#2563eb;
+    transform:translateY(-2px);
+}
+
+/* Hiệu ứng kính */
+.glow{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:
+    radial-gradient(circle at top left,
+    rgba(0,255,255,.12),transparent 40%);
+}
+</style>
+</head>
+
+<body>
+
+<div class="map-card">
+
+<div class="header">
+<div class="title">📍 Google Maps</div>
+
+<a class="btn"
+target="_blank"
+href="https://maps.google.com">
+🌍 Mở Maps
+</a>
+</div>
+
+<div class="glow"></div>
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d288.82245614606643!2d105.60967966788355!3d21.029396540889067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134510003119f35%3A0x5ca9c956cd6dc361!2zTuG7mWkgdGjhuqV0IE5ndXnhu4VuIFnhur9u!5e1!3m2!1svi!2s!4v1785143849191!5m2!1svi!2s"
+loading="lazy"
+allowfullscreen
+referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+
+</div>
+
+</body>
+</html>
