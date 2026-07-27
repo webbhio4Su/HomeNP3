@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scratch Player</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+/* Nền động */
+body{
+    background:linear-gradient(-45deg,#0f172a,#2563eb,#7c3aed,#0f172a);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Khung */
+.container{
+    width:100%;
+    height:100%;
+    padding:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Viền phát sáng */
+.frame{
+    width:100%;
+    height:100%;
+    padding:6px;
+    border-radius:28px;
+    background:linear-gradient(
+        135deg,
+        #60a5fa,
+        #a855f7,
+        #06b6d4,
+        #60a5fa
+    );
+    background-size:300% 300%;
+    animation:borderMove 6s linear infinite;
+    box-shadow:
+        0 0 25px rgba(96,165,250,.4),
+        0 0 50px rgba(168,85,247,.3);
+}
+
+@keyframes borderMove{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+.player{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    border-radius:22px;
+    background:#000;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="frame">
+
+<div class="player">
+<iframe
+src="https://scratch.mit.edu/projects/1364776672/embed"
+allowfullscreen
+allowtransparency="true"
+scrolling="no">
+</iframe>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
